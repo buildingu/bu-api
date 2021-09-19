@@ -17,7 +17,6 @@ class CreateCitiesTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('state_id')->constrained('states');
-            $table->timestamps();
         });
     }
 
