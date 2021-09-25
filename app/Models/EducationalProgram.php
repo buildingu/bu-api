@@ -15,7 +15,9 @@ class EducationalProgram extends Model
         'duration',
         'location',
         'requirements',
-        'description'
+        'description',
+        'duration_id',
+        'location_id'
     ];
 
     public function educational_program_durations(): HasOne {

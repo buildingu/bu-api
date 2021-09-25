@@ -10,8 +10,8 @@ class EducationalProgramCost extends Model
     use HasFactory;
 
     protected $fillable = [
-        'cost',
-        'type'
+        'program_id',
+        'cost'
     ];
 
     public function educational_program(): HasOne {

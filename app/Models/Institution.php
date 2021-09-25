@@ -10,7 +10,8 @@ class Institution extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'name',
+        'country_id'
     ];
 
     public function country(): HasOne {

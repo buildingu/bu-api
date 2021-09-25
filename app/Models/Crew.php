@@ -15,6 +15,7 @@ class Crew extends Model
         'quote',
         'position',
         'education_level',
+        'institution_id'
     ];
 
     public function institutions(): HasOne {
