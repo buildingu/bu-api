@@ -21,5 +21,4 @@ class Crew extends Model
     public function institutions(): HasOne {
         return $this->hasOne(Institutions::class);
     }
-
 }
