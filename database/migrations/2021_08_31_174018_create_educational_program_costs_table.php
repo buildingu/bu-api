@@ -15,7 +15,6 @@ class CreateEducationalProgramCostsTable extends Migration
     {
         Schema::create('educational_program_costs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('program_id')->constrained('educational_programs');
             $table->integer('cost');
             $table->string('type')->nullable;
             $table->timestamps();

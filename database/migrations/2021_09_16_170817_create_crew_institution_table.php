@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFundingOptionDemographicsTable extends Migration
+class CreateCrewInstitutionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateFundingOptionDemographicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('funding_option_demographics', function (Blueprint $table) {
+        Schema::create('crew_institution', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->foreignId("crew_id")->constrained("crew");
+            $table->foreignId("institution_id")->constrained("institutions");
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreateFundingOptionDemographicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('funding_option_demographics');
+        Schema::dropIfExists('crew_institution');
     }
 }

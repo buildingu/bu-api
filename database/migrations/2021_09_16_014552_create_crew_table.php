@@ -17,10 +17,9 @@ class CreateCrewTable extends Migration
             $table->id();
             $table->string("first_name", 100);
             $table->string("last_name", 100);
-            $table->text("quote");
+            $table->text("quote")->nullable();
             $table->string("position", 100);
             $table->string("education_level", 100);
-            $table->foreignId("institution_id")->constrained("institutions");
             $table->timestamps();
         });
     }

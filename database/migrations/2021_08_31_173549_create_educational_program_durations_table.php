@@ -16,7 +16,6 @@ class CreateEducationalProgramDurationsTable extends Migration
         Schema::create('educational_program_durations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->timestamps();
         });
     }
 

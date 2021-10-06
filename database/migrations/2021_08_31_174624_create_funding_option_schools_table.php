@@ -16,7 +16,6 @@ class CreateFundingOptionSchoolsTable extends Migration
         Schema::create('funding_option_schools', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->timestamps();
         });
     }
 
