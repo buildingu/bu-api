@@ -18,7 +18,6 @@ class CreateStudentOpportunitiesTable extends Migration
             $table->string('name');
             $table->string('host');
             $table->string('duration');
-            $table->string('location');
             $table->text('requirements');
             $table->text('description');
             $table->string('cost');

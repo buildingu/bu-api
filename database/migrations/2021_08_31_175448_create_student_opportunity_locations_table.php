@@ -16,7 +16,6 @@ class CreateStudentOpportunityLocationsTable extends Migration
         Schema::create('student_opportunity_locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->timestamps();
         });
     }
 
