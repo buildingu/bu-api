@@ -12,8 +12,6 @@ class EducationalProgram extends Model
     protected $fillable = [
         'name',
         'host',
-        'duration',
-        'location',
         'requirements',
         'description',
         'duration_id',
@@ -28,8 +26,8 @@ class EducationalProgram extends Model
         return $this->hasOne(EducationalProgramLocation::class);
     }
 
-    public function educational_program_costs(): BelongsTo {
-        return $this->belongsTo(EducationalProgramCost::class);
+    public function educational_program_costs(): BelongsToMany {
+        return $this->belongsToMany(EducationalProgramCost::class, 'cost_educational_program');
     }
 
     public function users(): BelongsToMany {

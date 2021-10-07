@@ -13,14 +13,12 @@ class Crew extends Model
     protected $fillable = [
         'first_name',
         'last_name',
-        'quote',
         'position',
         'education_level',
-        'institution_id'
     ];
 
-    public function institutions(): HasOne {
-        return $this->hasOne(Institutions::class);
+    public function institutions(): HasManyThrough {
+        return $this->hasManyThrough(Institutions::class, 'crew_institutions');
     }
     public function posts(): HasManyThrough {
         return $this->hasManyThrough(Post::class, 'author_post');

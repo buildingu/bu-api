@@ -13,7 +13,6 @@ class StudentOpportunity extends Model
         'name',
         'host',
         'duration',
-        'location',
         'requirements',
         'description',
         'cost',

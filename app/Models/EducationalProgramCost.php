@@ -10,12 +10,11 @@ class EducationalProgramCost extends Model
     use HasFactory;
 
     protected $fillable = [
-        'program_id',
         'cost'
     ];
 
-    public function educational_program(): HasOne {
-        return $this->hasOne(EducationalProgram::class);
+    public function educational_program(): HasManyThrough {
+        return $this->hasManyThrough(EducationalProgram::class, 'cost_educational_program');
     }
 
 }

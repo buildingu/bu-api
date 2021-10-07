@@ -18,8 +18,8 @@ class Institution extends Model
         return $this->hasOne(Country::class);
     }
 
-    public function crew(): BelongsTo {
-        return $this->belongsTo(Crew::class);
+    public function crew(): BelongsToMany {
+        return $this->belongsToMany(Crew::class, 'crew_institutions');
     }
 
 }
