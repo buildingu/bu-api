@@ -31,7 +31,7 @@ class EducationalProgram extends Model
     }
 
     public function users(): BelongsToMany {
-        return $this->belongsToMany(Users::class, 'user_educational_programs');
+        return $this->belongsToMany(User::class, 'user_educational_programs');
     }
 
 }
