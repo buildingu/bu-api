@@ -36,4 +36,7 @@ class StudentOpportunity extends Model
     public function student_opportunity_season(): HasOne {
         return $this->hasOne(StudentOpportunitySeason::class);
     }
+    public function users(): BelongsToMany {
+        return $this->belongsToMany(Users::class, 'user_funding_options');
+    }
 }

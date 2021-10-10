@@ -30,4 +30,7 @@ class FundingOption extends Model
     public function funding_option_demographic(): HasOne {
         return $this->hasOne(FundingOptionsDemographic::class);
     }
+    public function users(): BelongsToMany {
+        return $this->belongsToMany(Users::class, 'user_funding_options');
+    }
 }
