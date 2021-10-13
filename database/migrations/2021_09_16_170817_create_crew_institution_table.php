@@ -18,6 +18,7 @@ class CreateCrewInstitutionTable extends Migration
             $table->foreignId("crew_id")->constrained("crew");
             $table->foreignId("institution_id")->constrained("institutions");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

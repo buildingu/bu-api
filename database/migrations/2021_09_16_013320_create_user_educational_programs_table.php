@@ -19,6 +19,7 @@ class CreateUserEducationalProgramsTable extends Migration
             $table->foreignId("educational_program_id")->constrained("educational_programs");
             $table->date("save_date");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

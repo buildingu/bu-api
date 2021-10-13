@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->date('written_date');
             $table->text('comment');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

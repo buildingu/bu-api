@@ -16,6 +16,7 @@ class CreateEducationalProgramLocationsTable extends Migration
         Schema::create('educational_program_locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
         });
     }
 

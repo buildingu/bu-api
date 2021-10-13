@@ -18,6 +18,7 @@ class CreateEducationalProgramCostsTable extends Migration
             $table->integer('cost');
             $table->string('type')->nullable;
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
