@@ -15,6 +15,11 @@ class State extends Model
 
     public function countries(): HasOne
     {
-        return $this->hasOne(Countries::class);
+        return $this->hasOne(Country::class);
     }
+
+    public function cities(): BelongsTo {
+        return $this->belongsTo(City::class);
+    }
+
 }
