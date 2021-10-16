@@ -27,6 +27,7 @@ class CreateFundingOptionsTable extends Migration
             $table->boolean('is_remote')->default(0);
             $table->boolean('is_university')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

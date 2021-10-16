@@ -16,6 +16,7 @@ class CreateStudentOpportunityTypesTable extends Migration
         Schema::create('student_opportunity_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
         });
     }
 

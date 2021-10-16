@@ -18,6 +18,7 @@ class CreateTagPostTable extends Migration
             $table->foreignId('tag_id')->constrained('tags');
             $table->foreignId('post_id')->constrained('posts');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -16,6 +16,7 @@ class CreateStudentOpportunityTimeframesTable extends Migration
         Schema::create('student_opportunity_timeframes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
         });
     }
 

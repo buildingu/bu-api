@@ -18,6 +18,7 @@ class CreateCostEducationalProgramTable extends Migration
             $table->foreignId('program_id')->constrained('educational_programs');
             $table->foreignId('cost_id')->constrained('educational_program_costs');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

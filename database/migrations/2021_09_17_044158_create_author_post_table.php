@@ -18,6 +18,7 @@ class CreateAuthorPostTable extends Migration
             $table->foreignId('crew_id')->constrained('crew');
             $table->foreignId('post_id')->constrained('posts');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

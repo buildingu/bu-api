@@ -16,6 +16,7 @@ class CreateStudentOpportunitySeasonsTable extends Migration
         Schema::create('student_opportunity_seasons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
         });
     }
 

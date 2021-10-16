@@ -28,6 +28,7 @@ class CreateStudentOpportunitiesTable extends Migration
             $table->boolean('is_remote');
             $table->boolean('is_university');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

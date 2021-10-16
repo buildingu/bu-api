@@ -21,6 +21,7 @@ class CreateCrewTable extends Migration
             $table->string("position", 100);
             $table->string("education_level", 100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
