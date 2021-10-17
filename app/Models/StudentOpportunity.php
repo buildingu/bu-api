@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class StudentOpportunity extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'name',
@@ -37,6 +38,6 @@ class StudentOpportunity extends Model
         return $this->hasOne(StudentOpportunitySeason::class);
     }
     public function users(): BelongsToMany {
-        return $this->belongsToMany(User::class, 'user_student_opportunities'');
+        return $this->belongsToMany(User::class, 'user_student_opportunities');
     }
 }
