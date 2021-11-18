@@ -13,11 +13,13 @@ class AddFieldsUsersTable extends Migration
      */
     public function up()
     {
+        /*
         Schema::table('users', function (Blueprint $table){
             $table->foreignId('education_id')->constrained('education_levels');
             $table->foreignId('gender_id')->constrained('genders');
             $table->foreignId('city_id')->constrained('cities');
         });
+        */
     }
 
     /**
@@ -27,10 +29,12 @@ class AddFieldsUsersTable extends Migration
      */
     public function down()
     {
+        /*
         Schema::table('users', function (Blueprint $table){
             $table->dropConstrainedForeignId('education_id');
             $table->dropConstrainedForeignId('gender_id');
             $table->dropConstrainedForeignId('city_id');
         });
+        */
     }
 }
