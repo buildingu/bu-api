@@ -81,9 +81,9 @@ class User extends Authenticatable
     public function funding_options(): HasManyThrough {
         return $this->hasManyThrough(FundingOption::class, 'user_funding_options');
     }
-    */
-
+    
     public function student_opportunities(): HasManyThrough {
         return $this->hasManyThrough(StudentOpportunity::class, 'user_student_opportunities');
     }
+    */
 }
