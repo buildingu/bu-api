@@ -27,8 +27,8 @@
                                 <td class="border px-4 py-2 text-center">{{ $role->name }}</td>        
                                 <td class="border px-4 py-2 text-center">
                                     @if ($role->id != 1)
-                                    <button class="ml-4 bg-indigo-600 px-1 py-1 rounded"><x-fas-edit class="w-6 h-6 px-1" style="color: #FFF"/></button>
-                                    <button class="ml-4 bg-red-600 px-1 py-1 rounded"><x-fas-trash class="w-6 h-6 px-1" style="color: #FFF"/></button>
+                                    <button class="ml-4 bg-indigo-600 px-1 py-1 rounded"><x-fas-edit class="w-6 h-6 px-1 text-white"/></button>
+                                    <button class="ml-4 bg-red-600 px-1 py-1 rounded"><x-fas-trash class="w-6 h-6 px-1 text-white"/></button>
                                     @endif
                                 </td>
                             </tr>
