@@ -22,5 +22,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
         return view('dashboard');
     })->name('dashboard');
     Route::get('/roles', \App\Http\Livewire\Role::class)->name('roles');
+    Route::get('/countries', \App\Http\Livewire\Country::class)->name('countries');
+    Route::get('/states', \App\Http\Livewire\State::class)->name('states');
+    Route::get('/cities', \App\Http\Livewire\City::class)->name('cities');
 });
 

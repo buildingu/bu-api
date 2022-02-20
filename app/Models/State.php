@@ -9,11 +9,12 @@ class State extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
     protected $fillable = [
         'name',
     ];
 
-    public function countries(): HasOne
+    public function country(): HasOne
     {
         return $this->hasOne(Country::class);
     }
