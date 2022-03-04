@@ -14,8 +14,8 @@ class Country extends Model
         'name',
     ];
 
-    public function states(): BelongsTo {
-        return $this->belongsTo(State::class);
+    public function states() {
+        return $this->hasMany(State::class);
     }
 
 }

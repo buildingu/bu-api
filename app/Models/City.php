@@ -17,11 +17,11 @@ class City extends Model
         'state_id'
     ];
 
-    public function states(): HasOne {
-        return $this->hasOne(State::class);
+    public function state() {
+        return $this->belongsTo(State::class);
     }
 
-    public function users(): BelongsToMany {
+    public function users() {
         return $this->belongsToMany(User::class);
     }
 

@@ -14,13 +14,12 @@ class State extends Model
         'name',
     ];
 
-    public function country(): HasOne
-    {
-        return $this->hasOne(Country::class);
+    public function country() {
+        return $this->belongsTo(Country::class);
     }
 
-    public function cities(): BelongsTo {
-        return $this->belongsTo(City::class);
+    public function cities() {
+        return $this->hasMany(City::class);
     }
 
 }
