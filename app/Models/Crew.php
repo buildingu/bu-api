@@ -12,10 +12,11 @@ class Crew extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'first_name',
-        'last_name',
+        'name',
+        //'first_name',
+        //'last_name',
         'position',
-        'education_level',
+        'education_level'
     ];
 
     public function institutions(): HasManyThrough {

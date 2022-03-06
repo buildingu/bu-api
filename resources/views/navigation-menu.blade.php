@@ -40,6 +40,21 @@
                         {{ __('Cities') }}
                     </x-jet-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('crew') }}" :active="request()->routeIs('crew')">
+                        {{ __('Crew') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('institutions') }}" :active="request()->routeIs('institutions')">
+                        {{ __('Institutions') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('crew_institutions') }}" :active="request()->routeIs('crew_institutions')">
+                        {{ __('Crew Institutions') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

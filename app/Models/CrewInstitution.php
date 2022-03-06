@@ -12,4 +12,6 @@ class CrewInstitution extends Pivot
 
     public $incrementing = true;
 
+    protected $table = 'crew_institutions';
+
 }

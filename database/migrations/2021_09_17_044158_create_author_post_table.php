@@ -15,7 +15,7 @@ class CreateAuthorPostTable extends Migration
     {
         Schema::create('author_post', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('crew_id')->constrained('crew');
+            $table->foreignId('crew_id')->constrained('crews');
             $table->foreignId('post_id')->constrained('posts');
             $table->timestamps();
             $table->softDeletes();
