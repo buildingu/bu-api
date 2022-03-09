@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class City extends Model
 {
@@ -17,11 +19,11 @@ class City extends Model
         'state_id'
     ];
 
-    public function state() {
+    public function state(): BelongsTo {
         return $this->belongsTo(State::class);
     }
 
-    public function users() {
+    public function users(): BelongsToMany {
         return $this->belongsToMany(User::class);
     }
 
