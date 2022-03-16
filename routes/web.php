@@ -25,5 +25,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/countries', \App\Http\Livewire\Country::class)->name('countries');
     Route::get('/states', \App\Http\Livewire\State::class)->name('states');
     Route::get('/cities', \App\Http\Livewire\City::class)->name('cities');
+    Route::get('/educational_levels', \App\Http\Livewire\EducationalLevel::class)->name('educational_levels');
 });
 
