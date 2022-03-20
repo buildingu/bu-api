@@ -10,6 +10,6 @@ class EducationalLevel extends Component
     public function render()
     {
         $this->educationalLevel = ModelsEducationalLevel::all();
-        return view('livewire.educational-level');
+        return view('livewire.educational_level');
     }
 }
