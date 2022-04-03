@@ -28,5 +28,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('crew', \App\Http\Livewire\Crew::class)->name('crew');
     Route::get('institutions', \App\Http\Livewire\Institution::class)->name('institutions');
     Route::get('crew_institutions', \App\Http\Livewire\CrewInstitution::class)->name('crew_institutions');
+    Route::get('posts', \App\Http\Livewire\Post::class)->name('posts');
+    Route::get('tags', \App\Http\Livewire\Tag::class)->name('tags');
 });
 
