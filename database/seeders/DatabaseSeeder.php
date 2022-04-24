@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             CrewSeeder::class,
             CrewInstitutionSeeder::class,
             TagSeeder::class,
-            PostSeeder::class
+            PostSeeder::class,
+            TagPostSeeder::class
         ]);
     }
 }
