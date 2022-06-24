@@ -25,6 +25,7 @@ class CreateStudentOpportunitiesTable extends Migration
             $table->foreignId('location_id')->constrained('student_opportunity_locations');
             $table->foreignId('type_id')->constrained('student_opportunity_types');
             $table->foreignId('season_id')->constrained('student_opportunity_seasons');
+            $table->foreignId('resource_id')->constrained('resources');
             $table->boolean('is_remote');
             $table->boolean('is_university');
             $table->timestamps();

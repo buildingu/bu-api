@@ -21,6 +21,7 @@ class CreateEducationalProgramsTable extends Migration
             $table->text('description');
             $table->foreignId('duration_id')->constrained('educational_program_durations');
             $table->foreignId('location_id')->constrained('educational_program_locations');
+            $table->foreignId('resource_id')->constrained('resources');
             $table->timestamps();
             $table->softDeletes();
         });
