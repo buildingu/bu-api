@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
-            $table->id();
-            $table->text('location_name');
+        Schema::create('resource_types', function (Blueprint $table) {
+            $table->id()->autoIncrement()->primary();
+            $table->string("name")->unique();
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locations');
+        Schema::dropIfExists('resource_types');
     }
 };

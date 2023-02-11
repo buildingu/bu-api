@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tests', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('filter_values', function (Blueprint $table) {
+            $table->id()->autoIncrement()->primary();
+            $table->string("value");
+            $table->integer("filter_id");
+            $table->foreign("filter_id")->constrained();
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tests');
+        Schema::dropIfExists('filter_values');
     }
 };

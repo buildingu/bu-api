@@ -14,13 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('filters', function (Blueprint $table) {
-            $table->id();
-            $table->integer('cost');
-            $table->integer('duration_in_months');
-            $table->foreignID('location_id')->constrained('locations');
-            $table->foreignID('type_id')->constrained('types');
-            $table->foreignID('requirement_id')->constrained('requirements');
-            $table->integer('season_index');
+            $table->id()->autoIncrement()->primary();
+            $table->string("label");
+            $table->integer("filter_type_id");
+            $table->foreign("filter_type_id")->constrained();
         });
     }
 

@@ -9,7 +9,11 @@ class Resource extends Model
 {
     use HasFactory;
 
-    public function filter(){
-        return $this->belongsTo(Filter::class);
+    public function institution(){
+        return $this->belongsTo(Institution::class);
+    }
+
+    public function resourceType(){
+        return $this->belongsTo(ResourceType::class);
     }
 }
