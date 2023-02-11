@@ -13,14 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('resources', function (Blueprint $table) {
+        Schema::create('programs', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->foreignID('filter_id')->constrained('filters');
-            $table->text('content');
-            $table->boolean('active')->default(0);
-            $table->integer('views_last_month');
-            $table->timestamps();
+            $table->string("program_length");
+            $table->string("location");
+            $table->text("highlight");
+            $table->unsignedDouble("cost");
         });
     }
 
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resources');
+        Schema::dropIfExists('programs');
     }
 };

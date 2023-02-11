@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\location>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class LocationFactory extends Factory
+class ResourceFooterFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class LocationFactory extends Factory
     public function definition()
     {
         return [
-            'location_name'=>fake()->city(),
+            'additional_info'=>fake()->text($maxNbChars = 200),
+            'link'=>fake()->url()
         ];
     }
 }

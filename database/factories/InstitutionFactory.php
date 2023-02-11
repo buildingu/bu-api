@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\requirement>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class RequirementFactory extends Factory
+class InstitutionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,9 @@ class RequirementFactory extends Factory
     public function definition()
     {
         return [
-            'age'=>random_int(1,100),
-            'grade_level'=>random_int(1,12),
+            'name'=>fake()->company(),
+            'icon'=>fake()->imageUrl($width = 640, $height = 480),
+            'location'=>fake()->state()
         ];
     }
 }

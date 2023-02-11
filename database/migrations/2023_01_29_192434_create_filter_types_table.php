@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('requirements', function (Blueprint $table) {
-            $table->id();
-            $table->integer('age');
-            $table->integer('grade_level');
-            $table->timestamps();
+        Schema::create('filter_types', function (Blueprint $table) {
+            $table->id()->autoIncrement()->primary();
+            $table->string("input_type")->unique();
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requirements');
+        Schema::dropIfExists('filter_types');
     }
 };

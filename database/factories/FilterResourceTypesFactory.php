@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\filter>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class FilterFactory extends Factory
+class FilterResourceTypesFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class FilterFactory extends Factory
     public function definition()
     {
         return [
-            'label'=>fake->text($maxNbChars = 50),
-            'filter_type_id'=>FilterType::factory()
+            'filter_id'=>Filter::factory(),
+            'resource_type_id'=>ResourceType::factory()
         ];
     }
 }

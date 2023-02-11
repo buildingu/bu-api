@@ -9,16 +9,7 @@ class Filter extends Model
 {
     use HasFactory;
 
-    public function location(){
-        return $this->belongsTo(Location::class);
-    }
-    public function requirement(){
-        return $this->belongsTo(Requrement::class);
-    }
-    public function type(){
-        return $this->belongsTo(Type::class);
-    }
-    public function resource(){
-        return $this->hasMany(Resource::class);
+    public function filterType(){
+        return $this->belongsTo(FilterType::class);
     }
 }

@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
-            $table->id();
-            $table->text('type_name');
+        Schema::create('institutions', function (Blueprint $table) {
+            $table->id()->autoIncrement()->primary();
+            $table->string("name");
+            $table->string("icon");
+            $table->string("location");
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('institutions');
     }
 };
